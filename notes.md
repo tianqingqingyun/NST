@@ -108,8 +108,6 @@ $$L^{(ours)}_{transfer} = L_{gram} + L{histogram} + L{content} + L{tv}$$
 
 阅读日期 2022/10/15 
 
->To be continued
-
 ## notes:
 
 ### 作者认为采用高层的特征差异作为内容损失会导致局部结构的转化效果不理想，尤其表现在人脸等人眼比较敏感的图像上。根据Gatys等人的实验，直接采用低层的内容特征作为损失会使图像的风格化受阻。因此本文作者采用了Laplacian损失来确保生成图像能保持较好的局部纹理特征。作者还提出采用不同的池化层，以捕获不同尺度的局部信息。
@@ -118,9 +116,7 @@ $$L^{(ours)}_{transfer} = L_{gram} + L{histogram} + L{content} + L{tv}$$
 
 [地址](https://readpaper.com/pdf-annotate/note?pdfId=4512514380045901825&noteId=741167555585413120)
 
-阅读日期 2022/10/15 
-
->To be continued
+阅读日期 2022/10/15
 
 ## notes:
 
@@ -169,3 +165,16 @@ $$
 ## notes:
 
 ### 作者基于No.7 Perceptual Losses for Real-Time Style Transfer and Super-Resolution提出了一种能够进行多种风格转换的网络。他们采用了一种conditional instance normalization的方式，$z = \gamma_s ( \frac{ x − \mu}  \sigma )+ \beta_s$
+
+# No.15 Precomputed Real-Time Texture Synthesis with Markovian Generative Adversarial Networks
+
+[地址](https://readpaper.com/pdf-annotate/note?pdfId=4500175422989426689&noteId=679650995239387136)
+
+阅读日期 2022/11/12
+
+## notes:
+
+### 作者认为前者使用高斯分布来估计图像的纹理特征存在缺陷，基于马尔可夫随机场作对抗生成网络。他们发现某些平滑的区域，譬如天空，或者是缺少VGG网络关注的区域会产生比较差的结果。由于进行比对时，这些区域的激活无法被VGG网络有效捕捉。
+
+![](8.png)
+
